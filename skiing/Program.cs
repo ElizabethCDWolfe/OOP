@@ -7,7 +7,7 @@ interface IGreeting
 
 class English : IGreeting
 {
-    void SayHello()
+    public void SayHello()
     {
         Console.WriteLine("Hello!");
     }
@@ -15,7 +15,7 @@ class English : IGreeting
 
 class Spanish : IGreeting
 {
-    void SayHello()
+    public void SayHello()
     {
         Console.WriteLine("Hola");
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PRfDZvuxfJo4/WEoOwAynsbluzdxg4AV+HsmM6Pk1AsOFsan89GjukSBa+thSqQp1degq2Y7jkTBZY1SzsVscQ==",
+  "dgSpecHash": "fUjjxvmZbTdbdCE8RDMntk6xCQavJj4amJAw+lvbv/I1W9MwZ40sNJXeFRIgBxM794cliuaBrWTakbkhF2j2oA==",
   "success": true,
-  "projectFilePath": "/home/ewolfe/Desktop/csharppractice/skiing/skiing.csproj",
+  "projectFilePath": "/home/ewolfe/OOP/skiing/skiing.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ewolfe/Desktop/csharppractice/skiing/skiing.csproj",
+      "projectUniqueName": "/home/ewolfe/OOP/skiing/skiing.csproj",
       "projectName": "skiing",
-      "projectPath": "/home/ewolfe/Desktop/csharppractice/skiing/skiing.csproj",
+      "projectPath": "/home/ewolfe/OOP/skiing/skiing.csproj",
       "packagesPath": "/home/ewolfe/.nuget/packages/",
-      "outputPath": "/home/ewolfe/Desktop/csharppractice/skiing/obj/",
+      "outputPath": "/home/ewolfe/OOP/skiing/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ewolfe/.nuget/NuGet/NuGet.Config"
