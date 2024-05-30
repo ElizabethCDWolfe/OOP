@@ -1,0 +1,14 @@
+/home/ewolfe/Desktop/csharppractice/skiing/bin/Debug/net8.0/skiing
+/home/ewolfe/Desktop/csharppractice/skiing/bin/Debug/net8.0/skiing.deps.json
+/home/ewolfe/Desktop/csharppractice/skiing/bin/Debug/net8.0/skiing.runtimeconfig.json
+/home/ewolfe/Desktop/csharppractice/skiing/bin/Debug/net8.0/skiing.dll
+/home/ewolfe/Desktop/csharppractice/skiing/bin/Debug/net8.0/skiing.pdb
+/home/ewolfe/Desktop/csharppractice/skiing/obj/Debug/net8.0/skiing.GeneratedMSBuildEditorConfig.editorconfig
+/home/ewolfe/Desktop/csharppractice/skiing/obj/Debug/net8.0/skiing.AssemblyInfoInputs.cache
+/home/ewolfe/Desktop/csharppractice/skiing/obj/Debug/net8.0/skiing.AssemblyInfo.cs
+/home/ewolfe/Desktop/csharppractice/skiing/obj/Debug/net8.0/skiing.csproj.CoreCompileInputs.cache
+/home/ewolfe/Desktop/csharppractice/skiing/obj/Debug/net8.0/skiing.dll
+/home/ewolfe/Desktop/csharppractice/skiing/obj/Debug/net8.0/refint/skiing.dll
+/home/ewolfe/Desktop/csharppractice/skiing/obj/Debug/net8.0/skiing.pdb
+/home/ewolfe/Desktop/csharppractice/skiing/obj/Debug/net8.0/skiing.genruntimeconfig.cache
+/home/ewolfe/Desktop/csharppractice/skiing/obj/Debug/net8.0/ref/skiing.dll
