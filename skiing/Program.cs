@@ -26,29 +26,36 @@ abstract class APerson
     protected string _Name;
     protected IGreeting greeting;
     
-    protected APerson()
+    protected APerson(string name)
     {
+        _Name = name;
         greeting = new English(); 
     }
 
-    protected APerson(IGreeting greeting)
+    protected APerson(string name, IGreeting greeting)
     {
-        Greetings = greeting;
+        _Name = name;
+        this.greeting = greeting;
     }
 }
 
 class Skier : APerson 
 {
-    Pocket skierPocket;
+    public Pocket skierPocket;
 
-    public Skier() : base(new English()) // Default greeting for skier is English
+    public Skier(string name) : base(name, new English()) 
+    {   
+        skierPocket = new Pocket();
+    }
+
+    public Skier(string name, IGreeting greeting) : base(name, greeting)
     {
         skierPocket = new Pocket();
     }
 
-    public Skier(IGreeting greeting) : base(greeting)
+    public string ReturnName()
     {
-        skierPocket = new Pocket();
+        return this._Name;
     }
 }
 
@@ -56,12 +63,12 @@ class TicketMaster : APerson
 {   
     Inventory ticketMasterInventory;
 
-    public TicketMaster() : base(new English()) // Default greeting for ticket master is English
+    public TicketMaster(string name) : base(name, new English()) // Default greeting for ticket master is English
     {
         ticketMasterInventory = new Inventory();
     }
 
-    public TicketMaster(IGreeting greeting) : base(greeting)
+    public TicketMaster(string name, IGreeting greeting) : base(name, greeting)
     {
         ticketMasterInventory = new Inventory();
     }
@@ -69,7 +76,7 @@ class TicketMaster : APerson
     public void SellTickets(Skier skier, string site)
     {
         Ticket ticket = TakeTicketFromInventory(site);
-        ticket = StampTicket(ticket, skier._Name);
+        ticket = StampTicket(ticket, skier.ReturnName());
         skier.skierPocket.AddTicket(ticket);
     }
 
