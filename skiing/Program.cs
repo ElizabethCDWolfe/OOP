@@ -9,7 +9,7 @@ class English : IGreeting
 {
     public void SayHello()
     {
-        Console.WriteLine("Hello!");
+        Console.WriteLine("Hello");
     }
 }
 
@@ -132,7 +132,7 @@ class Inventory : ATicketContainer
 
     public Ticket RemoveTicket(string site)
     {
-        // Using LINQ library FirstOrDefault to get tticket, then using a lambda expression 
+        // Using LINQ library FirstOrDefault to get ticket, then using a lambda expression 
         // to match the ticket site to the site we are searching for 
         Ticket ticketToRemove = TicketList.FirstOrDefault(ticket => ticket.GetSite() == site);
 
@@ -145,6 +145,7 @@ class Inventory : ATicketContainer
             Console.WriteLine($"No more tickets left for {site}");
         }
 
+        // Handle exception for if ticket is null (none found)
         return ticketToRemove;
     }
 }
