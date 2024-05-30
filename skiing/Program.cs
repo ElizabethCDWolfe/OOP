@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 interface IGreeting
 {
-    public void SayHello();
+    void SayHello();
 }
 
 class English : IGreeting
@@ -58,7 +60,7 @@ class Skier : APerson
 
 class TicketMaster : APerson
 {
-    public Inventory TicketMasterInventory { get; }
+    private Inventory TicketMasterInventory { get; }
 
     public TicketMaster(string name)
         : base(name, new English())
@@ -148,9 +150,9 @@ class Inventory : ATicketContainer
 
 class Ticket
 {
-    public string SiteValidFor { get; }
-    public int SerialNumber { get; }
-    public string PersonValidFor { get; private set; }
+    private string SiteValidFor { get; }
+    private int SerialNumber { get; }
+    private string PersonValidFor { get; set; }
 
     public Ticket(string site)
     {
