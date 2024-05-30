@@ -23,72 +23,62 @@ class Spanish : IGreeting
 
 abstract class APerson
 {
-    public string name { get; }
-    public IGreeting greeting { get; set; }
+    public string Name { get; }
+    public IGreeting Greeting { get; }
 
     protected APerson(string name)
     {
-        this.name = name;
-        greeting = new English();
+        Name = name;
+        Greeting = new English();
     }
 
     protected APerson(string name, IGreeting greeting)
     {
-        this.name = name;
-        this.greeting = greeting;
-    }
-
-    public string ReturnName()
-    {
-        return name;
+        Name = name;
+        Greeting = greeting;
     }
 }
 
 class Skier : APerson
 {
-    public Pocket skierPocket { get; }
+    public Pocket SkierPocket { get; }
 
     public Skier(string name)
         : base(name, new English())
     {
-        skierPocket = new Pocket();
+        SkierPocket = new Pocket();
     }
 
     public Skier(string name, IGreeting greeting)
         : base(name, greeting)
     {
-        skierPocket = new Pocket();
-    }
-
-    public void SayHello()
-    {
-        greeting.SayHello();
+        SkierPocket = new Pocket();
     }
 }
 
 class TicketMaster : APerson
 {
-    public Inventory ticketMasterInventory { get; }
+    public Inventory TicketMasterInventory { get; }
 
     public TicketMaster(string name)
         : base(name, new English())
     {
-        ticketMasterInventory = new Inventory(10, 10, 0);
+        TicketMasterInventory = new Inventory(10, 10, 10);
     }
 
     public TicketMaster(string name, IGreeting greeting)
         : base(name, greeting)
     {
-        ticketMasterInventory = new Inventory(10, 10, 10);
+        TicketMasterInventory = new Inventory(10, 10, 10);
     }
 
     public void SellTicket(Skier skier, string site)
     {
-        Ticket ticket = ticketMasterInventory.RemoveTicket(site);
+        Ticket ticket = TicketMasterInventory.RemoveTicket(site);
         if (ticket != null)
         {
-            ticket = StampTicket(ticket, skier.ReturnName());
-            skier.skierPocket.AddTicket(ticket);
+            ticket = StampTicket(ticket, skier.Name);
+            skier.SkierPocket.AddTicket(ticket);
         }
         else
         {
@@ -158,25 +148,25 @@ class Inventory : ATicketContainer
 
 class Ticket
 {
-    public string siteValidFor { get; }
-    public int serialNumber { get; }
-    public string personValidFor { get; private set; }
+    public string SiteValidFor { get; }
+    public int SerialNumber { get; }
+    public string PersonValidFor { get; private set; }
 
     public Ticket(string site)
     {
-        siteValidFor = site;
-        serialNumber = GenerateSerialNumber();
-        personValidFor = "";
+        SiteValidFor = site;
+        SerialNumber = GenerateSerialNumber();
+        PersonValidFor = "";
     }
 
     public void SetPersonValidFor(string name)
     {
-        this.personValidFor = name;
+        PersonValidFor = name;
     }
 
     public string GetSite()
     {
-        return siteValidFor;
+        return SiteValidFor;
     }
 
     private int GenerateSerialNumber()
@@ -191,7 +181,7 @@ class Program
     static void Main(string[] args)
     {
         Skier mySkier = new Skier("Tom", new Spanish());
-        mySkier.SayHello();
+        mySkier.Greeting.SayHello();
 
         TicketMaster myTicketMaster = new TicketMaster("Jane");
         myTicketMaster.SellTicket(mySkier, "Keystone");
