@@ -57,6 +57,11 @@ class Skier : APerson
     {
         skierPocket = new Pocket();
     }
+
+    public void SayHello()
+    {
+        greeting.SayHello();
+    }
 }
 
 class TicketMaster : APerson
@@ -178,6 +183,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("hi");
+        Skier mySkier = new Skier("Tom", new Spanish());
+        mySkier.SayHello();
+
+        TicketMaster myTicketMaster = new TicketMaster("Jane");
+        myTicketMaster.SellTicket(mySkier, "Keystone");
     }
 }
