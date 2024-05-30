@@ -1,6 +1,6 @@
 ﻿using System;
 
-interface IGreeting 
+interface IGreeting
 {
     public void SayHello();
 }
@@ -21,15 +21,15 @@ class Spanish : IGreeting
     }
 }
 
-abstract class APerson 
+abstract class APerson
 {
-    readonly string name;
-    protected IGreeting greeting;
-    
+    public string name { get; }
+    public IGreeting greeting { get; set; }
+
     protected APerson(string name)
     {
         this.name = name;
-        greeting = new English(); 
+        greeting = new English();
     }
 
     protected APerson(string name, IGreeting greeting)
@@ -44,16 +44,18 @@ abstract class APerson
     }
 }
 
-class Skier : APerson 
+class Skier : APerson
 {
-    public Pocket skierPocket;
+    public Pocket skierPocket { get; }
 
-    public Skier(string name) : base(name, new English()) 
-    {   
+    public Skier(string name)
+        : base(name, new English())
+    {
         skierPocket = new Pocket();
     }
 
-    public Skier(string name, IGreeting greeting) : base(name, greeting)
+    public Skier(string name, IGreeting greeting)
+        : base(name, greeting)
     {
         skierPocket = new Pocket();
     }
@@ -65,24 +67,33 @@ class Skier : APerson
 }
 
 class TicketMaster : APerson
-{   
-    Inventory ticketMasterInventory;
+{
+    public Inventory ticketMasterInventory { get; }
 
-    public TicketMaster(string name) : base(name, new English()) 
+    public TicketMaster(string name)
+        : base(name, new English())
     {
-        ticketMasterInventory = new Inventory(10,10,10);
+        ticketMasterInventory = new Inventory(10, 10, 0);
     }
 
-    public TicketMaster(string name, IGreeting greeting) : base(name, greeting)
+    public TicketMaster(string name, IGreeting greeting)
+        : base(name, greeting)
     {
-        ticketMasterInventory = new Inventory(10,10,10);
+        ticketMasterInventory = new Inventory(10, 10, 10);
     }
 
     public void SellTicket(Skier skier, string site)
     {
         Ticket ticket = ticketMasterInventory.RemoveTicket(site);
-        ticket = StampTicket(ticket, skier.ReturnName());
-        skier.skierPocket.AddTicket(ticket);
+        if (ticket != null)
+        {
+            ticket = StampTicket(ticket, skier.ReturnName());
+            skier.skierPocket.AddTicket(ticket);
+        }
+        else
+        {
+            Console.WriteLine($"No ticket found for site: {site}");
+        }
     }
 
     private Ticket StampTicket(Ticket ticket, string name)
@@ -93,7 +104,7 @@ class TicketMaster : APerson
 }
 
 abstract class ATicketContainer
-{   
+{
     protected List<Ticket> TicketList;
 
     protected ATicketContainer()
@@ -104,16 +115,16 @@ abstract class ATicketContainer
 
 class Pocket : ATicketContainer
 {
-    public void AddTicket(Ticket ticket) 
+    public void AddTicket(Ticket ticket)
     {
         TicketList.Add(ticket);
     }
 }
 
-class Inventory : ATicketContainer 
+class Inventory : ATicketContainer
 {
     public Inventory(int numberOfAspen, int numberOfVail, int numberOfKeystone)
-    { 
+    {
         TicketList = new List<Ticket>();
 
         FillList(numberOfAspen, "Aspen");
@@ -124,7 +135,7 @@ class Inventory : ATicketContainer
     private void FillList(int number, string site)
     {
         for (int i = 0; i < number; i++)
-        {   
+        {
             Ticket ticket = new Ticket(site);
             TicketList.Add(ticket);
         }
@@ -132,29 +143,24 @@ class Inventory : ATicketContainer
 
     public Ticket RemoveTicket(string site)
     {
-        // Using LINQ library FirstOrDefault to get ticket, then using a lambda expression 
-        // to match the ticket site to the site we are searching for 
+        // Using LINQ library FirstOrDefault to get ticket, then using a lambda expression
+        // to match the ticket site to the site we are searching for
         Ticket ticketToRemove = TicketList.FirstOrDefault(ticket => ticket.GetSite() == site);
 
         if (ticketToRemove != null)
         {
             TicketList.Remove(ticketToRemove);
         }
-        else 
-        {
-            Console.WriteLine($"No more tickets left for {site}");
-        }
 
-        // Handle exception for if ticket is null (none found)
         return ticketToRemove;
     }
 }
 
-class Ticket 
+class Ticket
 {
-    readonly string siteValidFor;
-    readonly int serialNumber;
-    private string personValidFor;
+    public string siteValidFor { get; }
+    public int serialNumber { get; }
+    public string personValidFor { get; private set; }
 
     public Ticket(string site)
     {
@@ -163,7 +169,7 @@ class Ticket
         personValidFor = "";
     }
 
-    public void SetPersonValidFor(string name) 
+    public void SetPersonValidFor(string name)
     {
         this.personValidFor = name;
     }
