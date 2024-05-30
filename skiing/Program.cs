@@ -23,19 +23,24 @@ class Spanish : IGreeting
 
 abstract class APerson 
 {
-    protected string _Name;
+    readonly string name;
     protected IGreeting greeting;
     
     protected APerson(string name)
     {
-        _Name = name;
+        this.name = name;
         greeting = new English(); 
     }
 
     protected APerson(string name, IGreeting greeting)
     {
-        _Name = name;
+        this.name = name;
         this.greeting = greeting;
+    }
+
+    public string ReturnName()
+    {
+        return name;
     }
 }
 
@@ -52,50 +57,27 @@ class Skier : APerson
     {
         skierPocket = new Pocket();
     }
-
-    public string ReturnName()
-    {
-        return this._Name;
-    }
 }
 
 class TicketMaster : APerson
 {   
     Inventory ticketMasterInventory;
 
-    public TicketMaster(string name) : base(name, new English()) // Default greeting for ticket master is English
+    public TicketMaster(string name) : base(name, new English()) 
     {
-        ticketMasterInventory = new Inventory();
+        ticketMasterInventory = new Inventory(10,10,10);
     }
 
     public TicketMaster(string name, IGreeting greeting) : base(name, greeting)
     {
-        ticketMasterInventory = new Inventory();
+        ticketMasterInventory = new Inventory(10,10,10);
     }
 
-    public void SellTickets(Skier skier, string site)
+    public void SellTicket(Skier skier, string site)
     {
-        Ticket ticket = TakeTicketFromInventory(site);
+        Ticket ticket = ticketMasterInventory.RemoveTicket(site);
         ticket = StampTicket(ticket, skier.ReturnName());
         skier.skierPocket.AddTicket(ticket);
-    }
-
-    private Ticket TakeTicketFromInventory(string site)
-    {
-        // logic to check Inventory for site and then take ticket, do error checking
-        if (ticketMasterInventory.HasSiteTicket(site)) 
-        {
-            return ticketMasterInventory.RemoveTicket(site);
-        }
-        else 
-        {
-            return null;
-        }
-    }
-
-    private HasSiteTicket(string site)
-    {
-        // 
     }
 
     private Ticket StampTicket(Ticket ticket, string name)
@@ -125,17 +107,40 @@ class Pocket : ATicketContainer
 
 class Inventory : ATicketContainer 
 {
-    // Constructor to initialize Inventory with elements
-    Inventory(int numberOfAspen, int numberOfVail, int numberOfKeystone)
-    {
-        // add int number of tickets to inventory 
-        TicketList.Add(new List<Ticket> {Ticket})
+    public Inventory(int numberOfAspen, int numberOfVail, int numberOfKeystone)
+    { 
+        TicketList = new List<Ticket>();
+
+        FillList(numberOfAspen, "Aspen");
+        FillList(numberOfVail, "Vail");
+        FillList(numberOfKeystone, "Keystone");
     }
 
-    public Ticket RemoveTicket(Ticket ticket)
+    private void FillList(int number, string site)
     {
-        TicketList.Remove(ticket);
-        return ticket;
+        for (int i = 0; i < number; i++)
+        {   
+            Ticket ticket = new Ticket(site);
+            TicketList.Add(ticket);
+        }
+    }
+
+    public Ticket RemoveTicket(string site)
+    {
+        // Using LINQ library FirstOrDefault to get tticket, then using a lambda expression 
+        // to match the ticket site to the site we are searching for 
+        Ticket ticketToRemove = TicketList.FirstOrDefault(ticket => ticket.GetSite() == site);
+
+        if (ticketToRemove != null)
+        {
+            TicketList.Remove(ticketToRemove);
+        }
+        else 
+        {
+            Console.WriteLine($"No more tickets left for {site}");
+        }
+
+        return ticketToRemove;
     }
 }
 
@@ -147,14 +152,19 @@ class Ticket
 
     public Ticket(string site)
     {
-        this.siteValidFor = site;
-        this.serialNumber = GenerateSerialNumber();
-        this.personValidFor = "";
+        siteValidFor = site;
+        serialNumber = GenerateSerialNumber();
+        personValidFor = "";
     }
 
     public void SetPersonValidFor(string name) 
     {
         this.personValidFor = name;
+    }
+
+    public string GetSite()
+    {
+        return siteValidFor;
     }
 
     private int GenerateSerialNumber()
