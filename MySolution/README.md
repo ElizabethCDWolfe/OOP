@@ -16,11 +16,11 @@ can add tickets to itself.
 
 -A Ticket class
 
-To use, run 
+To use, run in /OOP/MySolution/skiing/src/
 
 dotnet run
 
-To test, run
+To test, run in /OOP/MySolution/skiing/tests/
 
 dotnet test
 
