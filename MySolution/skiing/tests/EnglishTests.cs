@@ -22,7 +22,7 @@ namespace EnglishTestsNS
                 english.SayHello();
 
                 // Assert
-                Assert.AreEqual("Hello" + Environment.NewLine, sw.ToString());
+                Assert.AreEqual("Hello\n", sw.ToString());
             }
         }
     }
