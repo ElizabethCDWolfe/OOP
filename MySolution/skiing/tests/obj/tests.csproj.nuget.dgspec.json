@@ -1,0 +1,142 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/ewolfe/OOP/MySolution/skiing/tests/tests.csproj": {}
+  },
+  "projects": {
+    "/home/ewolfe/OOP/MySolution/skiing/src/skiing.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ewolfe/OOP/MySolution/skiing/src/skiing.csproj",
+        "projectName": "skiing",
+        "projectPath": "/home/ewolfe/OOP/MySolution/skiing/src/skiing.csproj",
+        "packagesPath": "/home/ewolfe/.nuget/packages/",
+        "outputPath": "/home/ewolfe/OOP/MySolution/skiing/src/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ewolfe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ewolfe/OOP/MySolution/skiing/tests/tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ewolfe/OOP/MySolution/skiing/tests/tests.csproj",
+        "projectName": "tests",
+        "projectPath": "/home/ewolfe/OOP/MySolution/skiing/tests/tests.csproj",
+        "packagesPath": "/home/ewolfe/.nuget/packages/",
+        "outputPath": "/home/ewolfe/OOP/MySolution/skiing/tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ewolfe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/ewolfe/OOP/MySolution/skiing/src/skiing.csproj": {
+                "projectPath": "/home/ewolfe/OOP/MySolution/skiing/src/skiing.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[3.0.4, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.0.4, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.6.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

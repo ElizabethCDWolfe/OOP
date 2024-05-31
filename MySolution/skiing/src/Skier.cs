@@ -1,3 +1,5 @@
+using EnglishNS;
+
 namespace Skiing;
 
 class Skier : Person

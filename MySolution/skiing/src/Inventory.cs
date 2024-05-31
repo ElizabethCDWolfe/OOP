@@ -20,20 +20,11 @@ class Inventory : TicketContainer
         }
     }
 
-    public Ticket RemoveTicket(string site)
+    public Ticket? RemoveTicket(string site)
     {
         // Using LINQ library FirstOrDefault to get ticket, then using a lambda expression
         // to match the ticket site to the site we are searching for
         Ticket? ticketToRemove = TicketList.FirstOrDefault(ticket => ticket.SiteValidFor == site);
-
-        if (ticketToRemove != null)
-        {
-            TicketList.Remove(ticketToRemove);
-        }
-        else
-        {
-            throw new NullReferenceException($"No ticket found for site: {site}");
-        }
 
         return ticketToRemove;
     }

@@ -1,3 +1,5 @@
+using EnglishNS;
+
 namespace Skiing;
 
 abstract class Person

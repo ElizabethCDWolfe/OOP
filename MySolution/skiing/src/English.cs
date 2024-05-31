@@ -1,9 +1,12 @@
-namespace Skiing;
+using Skiing;
 
-class English : IGreeting
+namespace EnglishNS
 {
-    public void SayHello()
+    public class English : IGreeting
     {
-        Console.WriteLine("Hello");
+        public void SayHello()
+        {
+            Console.WriteLine("Hello");
+        }
     }
 }

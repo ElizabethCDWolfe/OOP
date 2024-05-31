@@ -1,3 +1,5 @@
+using EnglishNS;
+
 namespace Skiing;
 
 class TicketMaster : Skier
@@ -18,9 +20,16 @@ class TicketMaster : Skier
 
     public void SellTicket(Skier skier, string site)
     {
-        Ticket ticket = TicketMasterInventory.RemoveTicket(site);
-        ticket = StampTicket(ticket, skier.Name);
-        skier.SkierPocket.AddTicket(ticket);
+        Ticket? ticket = TicketMasterInventory.RemoveTicket(site);
+        if (ticket != null)
+        {
+            ticket = StampTicket(ticket, skier.Name);
+            skier.SkierPocket.AddTicket(ticket);
+        }
+        else
+        {
+            Console.WriteLine($"No tickets found for {site}");
+        }
     }
 
     private Ticket StampTicket(Ticket ticket, string name)
