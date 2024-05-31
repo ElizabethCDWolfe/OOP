@@ -50,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ewolfe/OOP/MySolution/skiing/skiing.csproj",
+      "projectUniqueName": "/home/ewolfe/OOP/MySolution/skiing/src/skiing.csproj",
       "projectName": "skiing",
-      "projectPath": "/home/ewolfe/OOP/MySolution/skiing/skiing.csproj",
+      "projectPath": "/home/ewolfe/OOP/MySolution/skiing/src/skiing.csproj",
       "packagesPath": "/home/ewolfe/.nuget/packages/",
-      "outputPath": "/home/ewolfe/OOP/MySolution/skiing/obj/",
+      "outputPath": "/home/ewolfe/OOP/MySolution/skiing/src/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ewolfe/.nuget/NuGet/NuGet.Config"
