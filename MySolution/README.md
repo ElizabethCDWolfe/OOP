@@ -16,13 +16,10 @@ can add tickets to itself.
 
 -A Ticket class
 
-To use, run in /OOP/MySolution/skiing/src/
+To use, run in /OOP/MySolution/skiing/Skiing.Core/
 
 dotnet run
 
-To test, run in /OOP/MySolution/skiing/tests/
+To test, run in /OOP/MySolution/skiing/Skiing.Tests/
 
 dotnet test
-
---Unit Tests are currently under construction for this project--
-
