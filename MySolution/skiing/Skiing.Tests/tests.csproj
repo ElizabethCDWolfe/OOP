@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Skiing.Core\skiing.csproj" />
     <ProjectReference Include="..\Skiing.Core\Skiing.Core.csproj" />
   </ItemGroup>
 

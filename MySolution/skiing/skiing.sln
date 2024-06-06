@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "skiing", "skiing.csproj", "{6EA1305F-3846-4DE2-9D86-CD7178644828}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MySkiingApp", "MySkiingApp\MySkiingApp.csproj", "{6EA1305F-3846-4DE2-9D86-CD7178644828}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skiing.Core", "Skiing.Core\Skiing.Core.csproj", "{2410CFDD-3C26-44A6-9DD2-9B05FE2E8CE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tests", "Skiing.Tests\tests.csproj", "{9C91DD45-678D-423B-AB7F-4A3F80FA6382}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{6EA1305F-3846-4DE2-9D86-CD7178644828}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EA1305F-3846-4DE2-9D86-CD7178644828}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EA1305F-3846-4DE2-9D86-CD7178644828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2410CFDD-3C26-44A6-9DD2-9B05FE2E8CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2410CFDD-3C26-44A6-9DD2-9B05FE2E8CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2410CFDD-3C26-44A6-9DD2-9B05FE2E8CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2410CFDD-3C26-44A6-9DD2-9B05FE2E8CE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C91DD45-678D-423B-AB7F-4A3F80FA6382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C91DD45-678D-423B-AB7F-4A3F80FA6382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C91DD45-678D-423B-AB7F-4A3F80FA6382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C91DD45-678D-423B-AB7F-4A3F80FA6382}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

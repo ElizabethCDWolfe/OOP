@@ -1,5 +1,0 @@
-/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Release/net8.0/skiing.GeneratedMSBuildEditorConfig.editorconfig
-/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Release/net8.0/skiing.AssemblyInfoInputs.cache
-/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Release/net8.0/skiing.AssemblyInfo.cs
-/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Release/net8.0/skiing.csproj.CoreCompileInputs.cache
-/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Release/net8.0/skiing.sourcelink.json
