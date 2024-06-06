@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "N+RuLTS6XM8PMESszsCY7ysP3rrE0BggogX/TJbs7/cKtXoLv04AnUVdOGx1T2CimTSSgSBJovLLD/Rvu3xvIw==",
+  "success": true,
+  "projectFilePath": "/home/ewolfe/OOP/MySolution/skiing/MySkiingApp/MySkiingApp.csproj",
+  "expectedPackageFiles": [
+    "/home/ewolfe/.nuget/packages/nunit3testadapter/4.5.0/nunit3testadapter.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

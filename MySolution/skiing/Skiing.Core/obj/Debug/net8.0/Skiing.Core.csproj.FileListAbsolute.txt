@@ -1,0 +1,12 @@
+/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/bin/Debug/net8.0/Skiing.Core.deps.json
+/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/bin/Debug/net8.0/Skiing.Core.dll
+/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/bin/Debug/net8.0/Skiing.Core.pdb
+/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Debug/net8.0/Skiing.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Debug/net8.0/Skiing.Core.AssemblyInfoInputs.cache
+/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Debug/net8.0/Skiing.Core.AssemblyInfo.cs
+/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Debug/net8.0/Skiing.Core.csproj.CoreCompileInputs.cache
+/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Debug/net8.0/Skiing.Core.sourcelink.json
+/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Debug/net8.0/Skiing.Core.dll
+/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Debug/net8.0/refint/Skiing.Core.dll
+/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Debug/net8.0/Skiing.Core.pdb
+/home/ewolfe/OOP/MySolution/skiing/Skiing.Core/obj/Debug/net8.0/ref/Skiing.Core.dll
