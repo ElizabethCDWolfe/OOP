@@ -2,7 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/MySolution/skiing/MySkiingApp/.vs/MySkiingApp
-/MySolution/skiing/.vs
-/MySolution/skiing/Skiing.Core/.vs/Skiing.Core/FileContentIndex
-/.vs
+obj
+bin
+.vs*
