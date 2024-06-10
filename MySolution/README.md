@@ -16,7 +16,7 @@ can add tickets to itself.
 
 -A Ticket class
 
-To use, run in /OOP/MySolution/skiing/Skiing.Core/
+To use, run in /OOP/MySolution/skiing/MySkiingApp/
 
 dotnet run
 

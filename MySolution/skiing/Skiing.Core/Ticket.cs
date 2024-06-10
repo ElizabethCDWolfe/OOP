@@ -25,7 +25,7 @@ public class Ticket
         _personValidFor = "";
     }
 
-    private int GenerateSerialNumber()
+    public int GenerateSerialNumber()
     {
         Random dice = new Random();
         return dice.Next(0, 1000);
