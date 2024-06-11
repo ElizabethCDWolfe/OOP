@@ -22,7 +22,7 @@ namespace SkiingTests
                 english.SayHello();
 
                 // Assert
-                string expectedOutput = "Hello" + Environment.NewLine;
+                string expectedOutput = "Hello" + sw.NewLine;
                 Assert.AreEqual(expectedOutput, sw.ToString());
             }
         }
