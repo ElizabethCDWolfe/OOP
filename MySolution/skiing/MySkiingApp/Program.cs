@@ -29,7 +29,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        Skier mySkier = new Skier("Tom");
+
+        if (args.Length < 1)
+        {
+            Console.WriteLine("Run program with the name of the skier that you would like to create");
+        }
+
+        String userSkierName = args[0];
+
+        Skier mySkier = new Skier(userSkierName);
         mySkier.Greeting.SayHello();
 
         TicketMaster myTicketMaster = new TicketMaster("Jane");
